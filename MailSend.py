@@ -33,6 +33,6 @@ def SendMails(PrintResults,StudName,StudMail,Roll):
             logging.info('Mailed Results to '+StudMail)
     except Exception as e:
         logging.debug(Roll+"Mailing Error: Please Check if Your Mail Limit Reached\n")
-        logging.debug(e)
+        print(e)
     else:
         logging.debug(Roll+" Mail Sent To:"+StudMail+" - "+str(datetime.datetime.now()))
