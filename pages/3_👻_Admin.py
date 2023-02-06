@@ -3,7 +3,7 @@ import os, shutil, logging
 
 st.title('🚫:red[Restricted]🚫')
 st.subheader(':blue[Only for Admins]')
-ParentDir=os.path.dirname(__file__).replace("Pages","")
+ParentDir=os.path.dirname(__file__).replace("pages","")
 Dir=os.getenv('Dir',default='PDFs')
 col1,col2,col3=st.columns([1,1,1])
 with col2:
