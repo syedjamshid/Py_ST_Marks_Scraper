@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from fpdf import FPDF
 from MailSend import *
 import logging
+from CheckMail import *
 
 logging.basicConfig(filename='Log.txt',format='%(asctime)s  %(clientip)-15s  %(levelname)s: %(message)s',level=logging.INFO)
 logging.info('App Started')
