@@ -272,5 +272,10 @@ if submit_button:
 
             #--Mailing--
             if StudMail!='':
-                st.write("You Will Recieve a Mail Shortly :smirk:")
-                SendMails(PrintMarks,StudName,StudMail,Roll)
+                if CheckSmtpServer():
+                    logging.info("SMTP server is accessible."+os.getenv('MServer',default='smtp-mail.outlook.com')+'-'+str(os.getenv('MPort',default=587)))
+                    st.write("You Will Recieve a Mail Shortly :smirk:")
+                    SendMails(PrintMarks,StudName,StudMail,Roll)
+
+                else:
+                    logging.info("SMTP server is not accessible.")
