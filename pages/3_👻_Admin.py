@@ -41,7 +41,7 @@ with col2:
                 Smtp = smtplib.SMTP(Host,Port)
                 Smtp.ehlo()
                 Smtp.quit()
-                st.success('Working With'+Host+' - '+str(Port))
+                st.success('Working With '+Host+' - '+str(Port))
                 logging.info("SMTP server is accessible. "+Host+' - '+str(Port))
                 
             except:
