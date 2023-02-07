@@ -1,5 +1,5 @@
 import streamlit as st
-import base64, time, os
+import base64, time
 #--Session Initilization--
 if 'PDF_Name' not in st.session_state:
     st.session_state['PDF_Name'] = ''
