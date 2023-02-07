@@ -6,11 +6,11 @@ import logging
 import random
 #--Mailing--
 def SendMails(PrintResults,StudName,StudMail,Roll):
-    logging.info('Mailing Started to '+StudMail)
+    logging.info('Trying to Send Mail '+StudMail)
     try:
         with smtplib.SMTP(os.getenv('MServer',default='smtp-mail.outlook.com'),os.getenv('MPort',default='587')) as smtp:
-            smtp.ehlo()
-            RandStr=''.join(random.choice(list('123456789'),k=6))
+            logging.info('SMTP Login Successful')
+            RandStr=''.join(random.choices(list('123456789'),k=6))
             smtp.starttls()
             smtp.login(os.getenv('Mail'),os.getenv('MPass'))
             logging.info('Mail Signed in with '+os.getenv('Mail'))
@@ -33,4 +33,3 @@ def SendMails(PrintResults,StudName,StudMail,Roll):
             logging.info('Mailed Results to '+StudMail)
     except Exception as e:
         logging.debug(Roll+"Mailing Error: Please Check if Your Mail Limit Reached\n")
-
