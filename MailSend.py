@@ -11,7 +11,6 @@ def SendMails(PrintResults,StudName,StudMail,Roll):
         with smtplib.SMTP(os.getenv('MServer',default='smtp-mail.outlook.com'),os.getenv('MPort',default='587')) as smtp:
             logging.info('SMTP Login Successful')
             RandStr=''.join(random.choices(list('123456789'),k=6))
-            smtp.starttls()
             smtp.login(os.getenv('Mail'),os.getenv('MPass'))
             logging.info('Mail Signed in with '+os.getenv('Mail'))
             MainMsg=EmailMessage()
