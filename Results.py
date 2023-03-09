@@ -163,7 +163,7 @@ if submit_button:
                     st.markdown(PrintMarks, unsafe_allow_html=True)
                     logging.info('DONE '+Roll)
                     TeamV="""\
-                        <p style="text-align:center"><strong><a href="https://github.com/Karthi-Villain">Team Villain4U</a></strong></p>
+                        <p style="text-align:center"><strong><a href="https://github.com/syedjamshid/Py_ST_Marks_Scraper">Team Villain4U</a></strong></p>
                         """
                     st.markdown(TeamV,unsafe_allow_html=True)
                     logging.info('Getting Details From Table')
